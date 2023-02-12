@@ -14,16 +14,24 @@ public class ExercicioVariaveis {
 		System.out.println("Informe a nota do trabalho de conclusão de curso: ");
 		double notaTCC = sc.nextDouble();
 		
-		System.out.println("Informe a nota das duas avaliações de semestre: ");
-		System.out.println("1* avaliação de semestre: ");
+		System.out.println("\nInforme a nota das duas avaliações de semestre: ");
+		System.out.println("\nNota primeira avaliação de semestre: ");
 		double notaPrimeiraAvaliacao = sc.nextDouble();
-		System.out.println("2* avaliação de semestre: ");
+		System.out.println("Nota segunda avaliação de semestre: ");
 		double notaSegundaAvaliacao = sc.nextDouble();
 		
 		double mediaFinal = (notaProvaSemestral * 0.5) + (notaTCC * 0.3) + (((notaPrimeiraAvaliacao + notaSegundaAvaliacao) / 2) * 0.2);
 		
-		System.out.printf("Média final do aluno: %.2f", mediaFinal);
+		if (mediaFinal >= 7) {
+			System.out.println("\nAluno aprovado!!");
+		} else if (mediaFinal >= 5) {
+			System.out.println("\nAluno em recuperação");
+		} else {
+			System.out.println("\nAluno reprovado :(");
+		}
 		
+		System.out.println("-------------------------");
+		System.out.printf("Média final do aluno: %.2f", mediaFinal);
 		
 		sc.close();
 	}
