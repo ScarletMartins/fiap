@@ -16,22 +16,22 @@ public class Desafio1 {
 
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Qual a velocidade do veículo?");
-		int velocidadeVeiculo = sc.nextInt();
 		System.out.println("Qual a velocidade máxima permitida da via?");
 		int velocidadeMaxima = sc.nextInt();
+		System.out.println("\nQual a velocidade do veículo?");
+		int velocidadeVeiculo = sc.nextInt();
 		
 		int velocidadeAcima = velocidadeVeiculo - velocidadeMaxima;
 		
 		
 		if(velocidadeAcima <= 0) {
-			System.out.println("\nVeículo dentro da velocidade permitida na via!!");
+			System.out.println("\nVelocidade do veículo: " + velocidadeVeiculo + " km/h. Dentro da velocidade permitida na via.");
 		}else if(velocidadeAcima > 0 && velocidadeAcima <=10) {
-			System.out.println("\nVeículo em velocidade menor ou igual a 10km/h acima do permitido. Valor a ser pago de multa: R$ 50,00");
-		}else if(velocidadeAcima > 0 && velocidadeAcima <=30) {
-			System.out.println("\nVeículo em velocidade maior que 10km/h e menor ou igual a 30km/h acima do permitido. Valor a ser pago de multa: R$ 100,00");
+			System.out.println("\nVelocidade do veículo: " + velocidadeVeiculo + " km/h. " + velocidadeAcima + "km/h acima do permitido na via. Valor a ser pago de multa: R$ 50,00");
+		}else if(velocidadeAcima <=30) {
+			System.out.println("\nVelocidade do veículo: " + velocidadeVeiculo + " km/h. " + velocidadeAcima + "km/h acima do permitido na via. Valor a ser pago de multa: R$ 100,00");
 		} else {
-			System.out.println("\nVeículo em velocidade maior que 30km/h acima do permitido. Valor a ser pago de multa: R$ 300,00");
+			System.out.println("\nVelocidade do veículo: " + velocidadeVeiculo + " km/h. " + velocidadeAcima + "km/h acima do permitido na via. Valor a ser pago de multa: R$ 300,00");
 		}
 		
 		
