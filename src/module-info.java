@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author scarletmartins
- *
- */
-module tipos {
-}
